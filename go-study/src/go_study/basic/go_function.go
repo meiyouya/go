@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"math"
-)
+import "math"
 
 func sum(num1, num2 int) int {
 	return num1 + num2
@@ -25,11 +22,48 @@ func swap(x *int, y *int) {
 	*y = temp
 }
 
-func main() {
-	getSquare := func(x float64) float64 {
-		return math.Sqrt(x)
+func getSequence() func() int {
+	i := 0
+	return func() int {
+		i += 1
+		return i
 	}
-	fmt.Println(getSquare(9)) // 输出 3
+}
+
+/**
+定义一个结构体
+*/
+type Circle struct {
+	radius float64
+}
+
+/**
+定义属于Circle的方法
+*/
+func (c Circle) getArea() float64 {
+	return math.Pi * c.radius * c.radius
+}
+
+func main() {
+	var c Circle
+	c.radius = 10.00
+	println("圆的面积为：", c.getArea())
+
+	//nextNumber := getSequence()		// 每次调用getSequence()时，i被重置为0
+	//
+	//println(nextNumber())	// 每次调用nextNumber()，i会在上一次调用nexNumber()的i值上加1
+	//println(nextNumber())
+	//println(nextNumber())
+	//
+	//nextNumber1 := getSequence()
+	//println(nextNumber1())
+	//println(nextNumber1())
+	//println(nextNumber1())
+
+	//getSquare := func(x float64) float64 {
+	//	return math.Sqrt(x)
+	//}
+	//fmt.Println(getSquare(9)) // 输出 3
 
 	//x, y := 3, 4
 	//fmt.Println("交换之前x、y的值：",x,y)	// 输出 交换之前x、y的值： 3 4
