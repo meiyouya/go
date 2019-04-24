@@ -1,7 +1,7 @@
 go-study/.idea
-go-study/.idea/**
+go-study/.idea/
 
-go-study/src/github.com/**
-go-study/src/cloud.google.com/**
-go-study/src/golang.org/**
-go-study/src/gopkg.in/**
+go-study/src/github.com/
+go-study/src/cloud.google.com/
+go-study/src/golang.org/
+go-study/src/gopkg.in/
