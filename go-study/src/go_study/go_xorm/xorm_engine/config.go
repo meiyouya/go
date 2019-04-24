@@ -5,13 +5,13 @@ import (
 	"os"
 )
 
-var CONFIG *ini.File
+var CONFIG *ini.File // 全局变量   CONFIG，存储config.ini中的信息
 
 /**
 初始化配置
 */
 func InitConfig() {
-	cfg, err := ini.Load("config.ini")
+	cfg, err := ini.Load("go-study/src/go_study/go_xorm/config.ini")
 	if err != nil {
 		println(err.Error())
 		os.Exit(2)

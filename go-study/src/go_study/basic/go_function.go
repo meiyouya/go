@@ -2,9 +2,9 @@ package main
 
 import "math"
 
-func sum(num1, num2 int) int {
-	return num1 + num2
-}
+//func sum(num1, num2 int) int {
+//	return num1 + num2
+//}
 
 func reverse(x, y string) (string, string) {
 	return y, x
@@ -45,9 +45,9 @@ func (c Circle) getArea() float64 {
 }
 
 func main() {
-	var c Circle
-	c.radius = 10.00
-	println("圆的面积为：", c.getArea())
+	//var c Circle
+	//c.radius = 10.00
+	//println("圆的面积为：", c.getArea())
 
 	//nextNumber := getSequence()		// 每次调用getSequence()时，i被重置为0
 	//
@@ -79,4 +79,13 @@ func main() {
 	//fmt.Print(i)   // 输出 8
 	//a, b := reverse("haha", "xixi")
 	//fmt.Println(a, b) // 输出  xixi    haha
+
+	var a int = 10
+	var b int = 20
+	sum := sum(a, b)
+	print(sum)
+}
+
+func sum(a, b int) int { // a,b是形式参数，也是sum函数的局部变量，在函数外部使用a,b不会影响到它
+	return a + b
 }
