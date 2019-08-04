@@ -42,4 +42,18 @@ func main() {
 	fmt.Println(arr5) // 声明的时候就初始化，指定各维长度，不指定的维度根据实际长度自动设置
 
 	fmt.Println(arr5[1][2]) // 通过索引访问值
+
+	fmt.Println(getAverage(arr3))
+}
+
+func getAverage(arr []int) float32 {
+
+	var i, sum int
+	var size = len(arr)
+
+	for i = 0; i < size; i++ {
+		sum += arr[i]
+	}
+
+	return float32(sum) / float32(size)
 }
